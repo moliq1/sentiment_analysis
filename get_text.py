@@ -15,7 +15,7 @@ def get_file_content(file_path):
     f = open(file_path, 'r')
     return f.read()
 
-# hard way
+# with code detact mode
 def get_file_content_hw(file_path):
      file_encoding = detect_file_encoding(file_path)
      f = codecs.open(file_path, 'r', file_encoding, errors='ignore')
@@ -33,8 +33,6 @@ def text_process(file_path):
         with open(file_path+"_"+i+".txt", 'w') as outfile:
             for line in data[i]:
                 outfile.write(" ".join(line).encode('utf-8') + '\n')
-
-def data_write(data):
     
 
 if __name__ == '__main__':
